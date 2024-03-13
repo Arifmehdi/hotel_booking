@@ -83,11 +83,11 @@
                 </div>
                 <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                 @csrf
-                    <!-- <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Username</span>
                         <input class="input100" type="text" name="username" placeholder="Enter username">
                         <span class="focus-input100"></span>
-                    </div> -->
+                    </div>
 
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
                         <span class="label-input100">Email</span>
