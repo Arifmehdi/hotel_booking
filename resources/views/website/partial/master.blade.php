@@ -111,15 +111,16 @@
                             @endif
                             @else
                             <li class="book_btn">
-                                <a class="book_now_btn" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle"
-                                    href="{{ route('admin.dashboard') }}" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class=" book_now_btn" href="{{ route('admin.dashboard') }}"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
+
+                            </li>
+                            <li class=" nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
