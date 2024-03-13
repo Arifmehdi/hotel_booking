@@ -23,7 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // dd('koawijfhgsdajgh');
         return view('admin.index');
+    }
+
+    public function blanc()
+    {
+        return view('admin.blanc');
     }
 }
