@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/about',[SiteController::class, 'about'])->name('about');
 Route::get('/contact',[SiteController::class, 'contact'])->name('contact');
 Route::get('/events',[SiteController::class, 'events'])->name('events');
 Route::get('/comming-soon',[SiteController::class, 'comingSoon'])->name('comingSoon');
+
+Route::resource('hotels',HotelController::class);
 
 Route::fallback(function(){
     return view('website.error');
